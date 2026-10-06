@@ -1,28 +1,107 @@
 .App {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   text-align: center;
 }
 
-.text{
-  color: #fff !important;
-    -webkit-text-stroke:  0.04em #EA1203;
-  text-shadow:
-      0 0 3px #EA1203,
-      0 0 5px #EA1203,
-      0 0 8px #EA1203,
-      0 0 12px #EA1203,
-      0 0 20px #EA1203,
-      0 0 25px #EA1203,
-      0 0 30px #EA1203,
-      0 0 40px #EA1203 !important;
+.App nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-elevated);
 }
 
-.button{
-  border: 2px solid #fff !important;
-  box-shadow: 
-    0 0 5px #1CD34D,
-    0 0 10px #1CD34D,
-    0 0 15px #1CD34D,
-    0 0 20px #1CD34D,
-    0 0 30px #1CD34D,
-    inset 0 0 5px rgba(28, 211, 77, 0.3) !important;
+.App nav a {
+  border-radius: 0.5rem;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  padding: 0.55rem 0.8rem;
+  text-decoration: none;
+}
+
+.App nav a:hover {
+  background-color: var(--color-surface-raised);
+  color: var(--color-text);
+}
+
+.App nav a.active {
+  background-color: var(--color-primary);
+  color: var(--color-on-accent);
+}
+
+.route-content {
+  min-height: calc(100vh - 4.2rem);
+}
+
+.text {
+  color: var(--color-text);
+  text-shadow: var(--shadow-text);
+}
+
+.button {
+  border: 2px solid var(--color-text);
+  box-shadow: var(--shadow-button);
+}
+
+.auth-root,
+.workout-list-container {
+  box-sizing: border-box;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.auth-root form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.exercise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.exercise-card {
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-elevated);
+}
+
+.exercise-image {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.tab-navigation,
+.filter-controls,
+.exercise-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab.active,
+.select-button {
+  background-color: var(--color-primary);
+  color: var(--color-on-accent);
+}
+
+.badge {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background-color: var(--color-surface-raised);
+  color: var(--color-text);
 }
